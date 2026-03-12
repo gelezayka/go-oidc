@@ -13,11 +13,11 @@ import (
 	"testing"
 
 	"github.com/go-jose/go-jose/v4"
-	"github.com/luikyv/go-oidc/internal/dcr"
-	"github.com/luikyv/go-oidc/internal/oidc"
-	"github.com/luikyv/go-oidc/internal/oidctest"
-	"github.com/luikyv/go-oidc/internal/timeutil"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/dcr"
+	"github.com/gelezayka/go-oidc/internal/oidc"
+	"github.com/gelezayka/go-oidc/internal/oidctest"
+	"github.com/gelezayka/go-oidc/internal/timeutil"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 const (

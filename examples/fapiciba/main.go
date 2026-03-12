@@ -10,10 +10,10 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/luikyv/go-oidc/examples/authutil"
-	"github.com/luikyv/go-oidc/internal/timeutil"
-	"github.com/luikyv/go-oidc/pkg/goidc"
-	"github.com/luikyv/go-oidc/pkg/provider"
+	"github.com/gelezayka/go-oidc/examples/authutil"
+	"github.com/gelezayka/go-oidc/internal/timeutil"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/pkg/provider"
 )
 
 func main() {

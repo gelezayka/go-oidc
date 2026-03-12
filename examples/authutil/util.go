@@ -19,9 +19,9 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/luikyv/go-oidc/examples/keys"
-	"github.com/luikyv/go-oidc/examples/ui"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/examples/keys"
+	"github.com/gelezayka/go-oidc/examples/ui"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 const (

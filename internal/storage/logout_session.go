@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 var _ goidc.LogoutSessionManager = NewLogoutSessionManager(0)

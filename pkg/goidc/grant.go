@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/luikyv/go-oidc/internal/timeutil"
+	"github.com/gelezayka/go-oidc/internal/timeutil"
 )
 
 // GrantManager contains all the logic needed to manage grants.

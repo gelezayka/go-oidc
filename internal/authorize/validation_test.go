@@ -5,9 +5,9 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/luikyv/go-oidc/internal/oidctest"
-	"github.com/luikyv/go-oidc/internal/timeutil"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/oidctest"
+	"github.com/gelezayka/go-oidc/internal/timeutil"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 func TestValidateRequest(t *testing.T) {

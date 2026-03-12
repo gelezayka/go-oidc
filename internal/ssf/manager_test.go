@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 func TestEventManager_CreateAndEventStream(t *testing.T) {

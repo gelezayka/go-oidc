@@ -3,7 +3,7 @@ package ssf
 import (
 	"encoding/json"
 
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 const (

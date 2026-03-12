@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/luikyv/go-oidc/internal/strutil"
+	"github.com/gelezayka/go-oidc/internal/strutil"
 )
 
 func TestNormalizeURL(t *testing.T) {

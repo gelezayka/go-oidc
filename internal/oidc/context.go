@@ -14,9 +14,9 @@ import (
 
 	"github.com/go-jose/go-jose/v4"
 	"github.com/google/uuid"
-	"github.com/luikyv/go-oidc/internal/joseutil"
-	"github.com/luikyv/go-oidc/internal/strutil"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/joseutil"
+	"github.com/gelezayka/go-oidc/internal/strutil"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 type Context struct {

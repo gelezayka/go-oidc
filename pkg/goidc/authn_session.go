@@ -3,7 +3,7 @@ package goidc
 import (
 	"context"
 
-	"github.com/luikyv/go-oidc/internal/timeutil"
+	"github.com/gelezayka/go-oidc/internal/timeutil"
 )
 
 // AuthnSessionManager contains all the logic needed to manage authentication

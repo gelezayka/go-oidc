@@ -3,7 +3,7 @@ package provider
 import (
 	"errors"
 
-	"github.com/luikyv/go-oidc/internal/oidc"
+	"github.com/gelezayka/go-oidc/internal/oidc"
 )
 
 func validateTokenBinding(config oidc.Configuration) error {

@@ -1,5 +1,5 @@
 package goidc
 
-import "github.com/luikyv/go-oidc/internal/timeutil"
+import "github.com/gelezayka/go-oidc/internal/timeutil"
 
 var TimestampNow = timeutil.TimestampNow

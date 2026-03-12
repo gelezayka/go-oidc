@@ -6,11 +6,11 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/luikyv/go-oidc/internal/joseutil"
-	"github.com/luikyv/go-oidc/internal/oidc"
-	"github.com/luikyv/go-oidc/internal/oidctest"
-	"github.com/luikyv/go-oidc/internal/timeutil"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/joseutil"
+	"github.com/gelezayka/go-oidc/internal/oidc"
+	"github.com/gelezayka/go-oidc/internal/oidctest"
+	"github.com/gelezayka/go-oidc/internal/timeutil"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 func TestJARFromRequestObject(t *testing.T) {

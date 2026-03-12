@@ -1,10 +1,10 @@
 package token
 
 import (
-	"github.com/luikyv/go-oidc/internal/dpop"
-	"github.com/luikyv/go-oidc/internal/hashutil"
-	"github.com/luikyv/go-oidc/internal/oidc"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/dpop"
+	"github.com/gelezayka/go-oidc/internal/hashutil"
+	"github.com/gelezayka/go-oidc/internal/oidc"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 // ValidatePoP validates that the context contains the information required to

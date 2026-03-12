@@ -4,9 +4,9 @@ import (
 	"crypto/subtle"
 	"slices"
 
-	"github.com/luikyv/go-oidc/internal/oidc"
-	"github.com/luikyv/go-oidc/internal/timeutil"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/oidc"
+	"github.com/gelezayka/go-oidc/internal/timeutil"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 func create(ctx oidc.Context, initialToken string, meta *goidc.ClientMeta) (response, error) {

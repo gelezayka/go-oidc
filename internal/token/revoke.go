@@ -1,9 +1,9 @@
 package token
 
 import (
-	"github.com/luikyv/go-oidc/internal/client"
-	"github.com/luikyv/go-oidc/internal/oidc"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/client"
+	"github.com/gelezayka/go-oidc/internal/oidc"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 func revoke(ctx oidc.Context, req queryRequest) error {

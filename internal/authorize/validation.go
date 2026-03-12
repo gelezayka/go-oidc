@@ -7,11 +7,11 @@ import (
 	"time"
 
 	"github.com/go-jose/go-jose/v4/jwt"
-	"github.com/luikyv/go-oidc/internal/client"
-	"github.com/luikyv/go-oidc/internal/dpop"
-	"github.com/luikyv/go-oidc/internal/oidc"
-	"github.com/luikyv/go-oidc/internal/strutil"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/client"
+	"github.com/gelezayka/go-oidc/internal/dpop"
+	"github.com/gelezayka/go-oidc/internal/oidc"
+	"github.com/gelezayka/go-oidc/internal/strutil"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 // validateRequest validates the parameters sent in an authorization request.

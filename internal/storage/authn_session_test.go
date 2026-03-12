@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/luikyv/go-oidc/internal/storage"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/storage"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 func TestSaveAuthnSession(t *testing.T) {

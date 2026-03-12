@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/luikyv/go-oidc/internal/hashutil"
-	"github.com/luikyv/go-oidc/internal/oidctest"
-	"github.com/luikyv/go-oidc/pkg/goidc"
+	"github.com/gelezayka/go-oidc/internal/hashutil"
+	"github.com/gelezayka/go-oidc/internal/oidctest"
+	"github.com/gelezayka/go-oidc/pkg/goidc"
 )
 
 func TestValidatePoP_NoConfirmation(t *testing.T) {
