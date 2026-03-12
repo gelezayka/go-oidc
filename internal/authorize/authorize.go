@@ -53,7 +53,6 @@ func initAuth(ctx oidc.Context, req request) error {
 	if err != nil {
 		return goidc.WrapError(goidc.ErrorCodeInvalidClient, "invalid client_id", err)
 	}
-
 	// Check that the client is allowed to call the authorization endpoint.
 	if !slices.ContainsFunc(c.GrantTypes, func(gt goidc.GrantType) bool {
 		return gt == goidc.GrantAuthorizationCode || gt == goidc.GrantImplicit

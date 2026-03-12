@@ -526,25 +526,25 @@ func (ti TokenInfo) MarshalJSON() ([]byte, error) {
 
 type AuthorizationParameters struct {
 	RequestURI              string                `json:"request_uri,omitempty"`
-	RequestObject           string                `json:"request,omitempty"`
+	RequestObject           string                `json:"request,omitempty" gorm:"column:request"`
 	RedirectURI             string                `json:"redirect_uri,omitempty"`
 	ResponseMode            ResponseMode          `json:"response_mode,omitempty"`
 	ResponseType            ResponseType          `json:"response_type,omitempty"`
-	Scopes                  string                `json:"scope,omitempty"`
+	Scopes                  string                `json:"scope,omitempty" gorm:"column:scope"`
 	State                   string                `json:"state,omitempty"`
 	Nonce                   string                `json:"nonce,omitempty"`
 	CodeChallenge           string                `json:"code_challenge,omitempty"`
 	CodeChallengeMethod     CodeChallengeMethod   `json:"code_challenge_method,omitempty"`
 	Prompt                  PromptType            `json:"prompt,omitempty"`
-	MaxAuthnAgeSecs         *int                  `json:"max_age,omitempty"`
+	MaxAuthnAgeSecs         *int                  `json:"max_age,omitempty" gorm:"column:max_age"`
 	Display                 DisplayValue          `json:"display,omitempty"`
 	ACRValues               string                `json:"acr_values,omitempty"`
-	Claims                  *ClaimsObject         `json:"claims,omitempty"`
-	AuthDetails             []AuthorizationDetail `json:"authorization_details,omitempty"`
-	Resources               Resources             `json:"resource,omitempty"`
-	DPoPJKT                 string                `json:"dpop_jkt,omitempty"`
+	Claims                  *ClaimsObject         `json:"claims,omitempty" gorm:"column:claims;type:text;serializer:json"`
+	AuthDetails             []AuthorizationDetail `json:"authorization_details,omitempty" gorm:"column:authorization_details;type:text;serializer:json"`
+	Resources               Resources             `json:"resource,omitempty" gorm:"column:resource;type:text;serializer:json"`
+	DPoPJKT                 string                `json:"dpop_jkt,omitempty"  gorm:"column:dpop_jkt"`
 	LoginHint               string                `json:"login_hint,omitempty"`
-	LoginTokenHint          string                `json:"login_hint_token,omitempty"`
+	LoginTokenHint          string                `json:"login_hint_token,omitempty" gorm:"column:login_hint_token"`
 	IDTokenHint             string                `json:"id_token_hint,omitempty"`
 	ClientNotificationToken string                `json:"client_notification_token,omitempty"`
 	BindingMessage          string                `json:"binding_message,omitempty"`

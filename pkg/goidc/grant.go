@@ -27,33 +27,33 @@ type Grant struct {
 	// RefreshToken, if present, is the plain text refresh token issued for this grant.
 	// Note: For security reasons, it is strongly recommended to encrypt this value before storing it in a database.
 	RefreshToken       string `json:"refresh_token,omitempty"`
-	CreatedAtTimestamp int    `json:"created_at"`
-	ExpiresAtTimestamp int    `json:"expires_at"`
+	CreatedAtTimestamp int    `json:"created_at" gorm:"column:created_at"`
+	ExpiresAtTimestamp int    `json:"expires_at" gorm:"column:expires_at"`
 	// AuthCode is the authorization code used to generate this grant
 	// in case of authorization code grant type.
-	AuthCode string `json:"authorization_code,omitempty"`
+	AuthCode string `json:"authorization_code,omitempty" gorm:"column:authorization_code"`
 
-	Type GrantType `json:"grant_type"`
+	Type GrantType `json:"grant_type" gorm:"column:grant_type"`
 	// Subject is the ID of the user or client associated with the grant.
-	Subject  string `json:"sub"`
-	ClientID string `json:"client_id"`
+	Subject  string `json:"sub" gorm:"column:sub"`
+	ClientID string `json:"client_id" gorm:"column:client_id"`
 
 	Scopes      string                `json:"scopes"`
-	AuthDetails []AuthorizationDetail `json:"auth_details,omitempty"`
-	Resources   Resources             `json:"resources,omitempty"`
+	AuthDetails []AuthorizationDetail `json:"auth_details,omitempty" gorm:"column:auth_details;type:text;serializer:json"`
+	Resources   Resources             `json:"resources,omitempty" gorm:"column:resources;type:text;serializer:json"`
 
 	// Nonce is the nonce sent by the client in the authorization request.
 	// If present, it will be included in the ID token.
 	Nonce string `json:"nonce,omitempty"`
 
 	// JWKThumbprint stores the thumbprint of the JWK provided via DPoP.
-	JWKThumbprint string `json:"jwk_thumbprint,omitempty"`
+	JWKThumbprint string `json:"jwk_thumbprint,omitempty" gorm:"column:jwk_thumbprint"`
 	// ClientCertThumbprint contains the thumbprint of the certificate used by
 	// the client to generate the token.
-	ClientCertThumbprint string `json:"client_cert_thumbprint,omitempty"`
+	ClientCertThumbprint string `json:"client_cert_thumbprint,omitempty" gorm:"column:client_cert_thumbprint"`
 
 	// Store allows storing custom data within the grant.
-	Store map[string]any `json:"store,omitempty"`
+	Store map[string]any `json:"store,omitempty" gorm:"column:store;type:text;serializer:json"`
 }
 
 // IsExpired returns whether the grant has expired.

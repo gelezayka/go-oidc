@@ -31,25 +31,25 @@ type AuthnSessionManager interface {
 // It can be interacted with so to implement more sophisticated user
 // authentication flows.
 type AuthnSession struct {
-	ID string `json:"id"`
+	ID string `json:"id" gorm:"column:id"`
 	// Subject is the user identifier.
 	//
 	// This value must be informed during the authentication flow.
-	Subject  string `json:"sub"`
-	ClientID string `json:"client_id"`
+	Subject  string `json:"sub" gorm:"column:subject"`
+	ClientID string `json:"client_id" gorm:"column:client_id"`
 	// PushedAuthReqID is the id generated during /par used to fetch the session
 	// during calls to /authorize.
 	//
 	// This value will be returned as the request_uri of the /par response.
-	PushedAuthReqID string `json:"pushed_auth_req_id,omitempty"`
+	PushedAuthReqID string `json:"pushed_auth_req_id,omitempty" gorm:"column:pushed_auth_req_id"`
 	// CallbackID is the id used to fetch the authentication session after user
 	// interaction during calls to the callback endpoint.
-	CallbackID string `json:"callback_id,omitempty"`
-	CIBAAuthID string `json:"ciba_auth_req_id,omitempty"`
+	CallbackID string `json:"callback_id,omitempty" gorm:"column:callback_id"`
+	CIBAAuthID string `json:"ciba_auth_req_id,omitempty" gorm:"column:ciba_auth_req_id"`
 	AuthCode   string `json:"auth_code,omitempty"`
 	// PolicyID is the id of the autentication policy used to authenticate
 	// the user.
-	PolicyID string `json:"policy_id,omitempty"`
+	PolicyID string `json:"policy_id,omitempty" gorm:"column:policy_id"`
 	// StepID is the identifier of the current step in a multi-step
 	// authentication policy. It is used only when such a policy is in effect.
 	StepID string `json:"step_id,omitempty"`
@@ -59,19 +59,19 @@ type AuthnSession struct {
 	GrantedScopes string `json:"granted_scopes,omitempty"`
 	// GrantedAuthDetails is the authorization details the client will be granted
 	// access once the access token is generated.
-	GrantedAuthDetails []AuthorizationDetail `json:"granted_authorization_details,omitempty"`
-	GrantedResources   Resources             `json:"granted_resources,omitempty"`
+	GrantedAuthDetails []AuthorizationDetail `json:"granted_authorization_details,omitempty" gorm:"column:granted_authorization_details;type:text;serializer:json"`
+	GrantedResources   Resources             `json:"granted_resources,omitempty" gorm:"column:granted_resources;type:text;serializer:json"`
 
-	JWKThumbprint string `json:"jwk_thumbprint,omitempty"`
+	JWKThumbprint string `json:"jwk_thumbprint,omitempty" gorm:"column:jwk_thumbprint"`
 	// ClientCertThumbprint contains the thumbprint of the certificate used by
 	// the client to generate the token.
-	ClientCertThumbprint string `json:"client_cert_thumbprint,omitempty"`
+	ClientCertThumbprint string `json:"client_cert_thumbprint,omitempty" gorm:"column:client_cert_thumbprint"`
 
 	// Store allows storing additional information between interactions.
-	Store              map[string]any `json:"store,omitempty"`
-	ExpiresAtTimestamp int            `json:"expires_at"`
-	CreatedAtTimestamp int            `json:"created_at"`
-	IDTokenHintClaims  map[string]any `json:"id_token_hint_claims,omitempty"`
+	Store              map[string]any `json:"store,omitempty" gorm:"type:text;serializer:json"`
+	ExpiresAtTimestamp int            `json:"expires_at" gorm:"column:expires_at"`
+	CreatedAtTimestamp int            `json:"created_at" gorm:"column:created_at"`
+	IDTokenHintClaims  map[string]any `json:"id_token_hint_claims,omitempty" gorm:"type:text;serializer:json"`
 	AuthorizationParameters
 }
 
